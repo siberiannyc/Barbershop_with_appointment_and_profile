@@ -1,3 +1,7 @@
+This is a web application for barbershop chain. 
+With appointment adoptive system and user profile.
+Firebase API KEY required.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
