@@ -1,6 +1,6 @@
 This is a web application for barbershop chain. 
 With appointment adoptive system and user profile.
-Firebase API KEY needed.
+Firebase API KEY required.
 
 # Getting Started with Create React App
 
