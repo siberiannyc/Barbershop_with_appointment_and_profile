@@ -25,7 +25,7 @@ const FormCard = ({
       exitBeforeEnter
       className={classes.motions}
     >
-      <Typography variant="cairo" className={classes.header}>
+      <Typography variant="secondary" className={classes.header}>
         {header}
       </Typography>
       <FormControl

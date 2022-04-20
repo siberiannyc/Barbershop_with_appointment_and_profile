@@ -138,11 +138,31 @@ const FinalAppointment = () => {
   // Total sum and time after delete
   let sum = sumArr.reduce((a, b) => a + b, 0) - deletePrice;
 
+  // Count discount if applicable
+  let discount = Math.round(sum * 0.9);
+
+  // Apply total $
+
+  const totalMoney = () => {
+    if (
+      selector.authorized &&
+      !Object.keys(selector.customer.appointments.visited).length &&
+      !Object.keys(selector.customer.appointments.confirmed).length
+    ) {
+      return discount;
+    } else {
+      return sum;
+    }
+  };
+
+  console.log(totalMoney());
 
   let time = totalTime - displayDeleteTime;
 
   let summaryData = {
-    total: sum,
+    total: totalMoney(),
+    discount: discount,
+    sum: sum,
     where: `${selector.shop.activeShop.name}, ${selector.shop.activeShop.city}`,
     date: selector.appointmentDate,
     time: selector.startTime,
@@ -169,7 +189,7 @@ const FinalAppointment = () => {
             customer: customer,
             customerId: customerId,
             services: servObj,
-            total: sum,
+            total: totalMoney(),
             time: selector.appointmentSlots,
             status: "Confirmed",
             rating: 0,
@@ -200,7 +220,7 @@ const FinalAppointment = () => {
               barberId: selector.barberId,
               barberName: selector.barber.name,
               services: servObj,
-              total: sum,
+              total: totalMoney(),
               time: selector.appointmentSlots,
               shop: selector.shop.activeShop,
               date: selector.appointmentDate,
@@ -251,7 +271,6 @@ const FinalAppointment = () => {
             mt: { xs: "55vh", md: "12vh" },
           }}
         >
-          
           {!selector.submitted && (
             <Box
               id="summaryContent"

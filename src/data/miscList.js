@@ -67,4 +67,32 @@ export const months = {
   12: "Dec",
 };
 
+export const footerLinks = [
+  {
+    category: "ACCOUNT",
+    name: "Book Now",
+    link: "/book-shop",
+  },
+  {
+    category: "ACCOUNT",
+    name: "Account",
+    link: "/profile/stats",
+  },
+  {
+    category: "ACCOUNT",
+    name: "Appointments",
+    link: "/profile/appointments",
+  },
+  {
+    category: "COMPANY",
+    name: "Services",
+    link: "/services/services",
+  },
+  {
+    category: "COMPANY",
+    name: "Careers",
+    link: "/careers",
+  },
+];
+
 export default fieldData;

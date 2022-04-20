@@ -44,7 +44,6 @@ import {
   resetUser,
 } from "../store/loginSlice";
 
-
 // Firebase config
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -168,6 +167,7 @@ export const useLogin = (fetch, email, password) => {
   useGetProfile(fetchGet, customerId);
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
+      console.log(user);
       if (user) {
         dispatch(isAuth(true));
       } else {

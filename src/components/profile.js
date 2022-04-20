@@ -7,7 +7,7 @@ const Profile = () => {
   const boxes = BoxesStyles();
 
   return (
-    <Box className={boxes.base}>
+    <Box className={boxes.base} sx={{ bgcolor: "primary.light" }}>
       <Box className={boxes.container} sx={{ mt: "11vh", width: "25%" }}>
         <SummaryBox />
       </Box>

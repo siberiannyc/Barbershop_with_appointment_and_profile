@@ -31,7 +31,7 @@ export default function Stats() {
   useEffect(() => {
     setUpdUser(true);
     dispatch(loader(true));
-     window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, []);
   useEffect(() => {
     if (updUser) setUpdUser(false);
@@ -56,8 +56,7 @@ export default function Stats() {
     }
   }, [selector.customer]);
 
-  useEffect(() => {
-  }, [stats]);
+  useEffect(() => {}, [stats]);
 
   useEffect(() => {
     setLastVisit(selector.lastVisit);
@@ -77,6 +76,7 @@ export default function Stats() {
           sx={{
             justifyContent: "start",
             mt: 5,
+          
           }}
         >
           <Box
@@ -97,7 +97,7 @@ export default function Stats() {
                 <Typography variant="overline" sx={{ fontSize: "1.5rem" }}>
                   You will find the statistics here after your first visit.
                 </Typography>
-                <BookButton color="error"/>
+                <BookButton color="error" />
               </Card>
             )}
             {stats !== null &&

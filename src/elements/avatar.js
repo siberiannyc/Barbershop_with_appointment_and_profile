@@ -10,31 +10,12 @@ export default function CustomerAvatar({ width, height, size }) {
   let lastName = selector.customer.lastName;
   let name = `${firstName} ${lastName}`;
 
-  let dispatch = useDispatch();
 
-  function stringToColor(string) {
-    let hash = 0;
-    let i;
-
-    for (i = 0; i < string.length; i += 1) {
-      hash = string.charCodeAt(i) + ((hash << 5) - hash);
-    }
-
-    let color = "#";
-
-    for (i = 0; i < 3; i += 1) {
-      const value = (hash >> (i * 8)) & 0xff;
-      color += `00${value.toString(16)}`.substr(-2);
-    }
-
-    dispatch(avatarColor(color));
-    return color;
-  }
 
   function stringAvatar(name) {
     return {
       sx: {
-        bgcolor: stringToColor(name),
+        bgcolor: "accent.main",
         width: width,
         height: height,
         fontSize: size,

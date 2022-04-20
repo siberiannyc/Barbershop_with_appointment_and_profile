@@ -128,6 +128,37 @@ const BoxesStyles = makeStyles(() => ({
       background: "#93B6C2",
     },
   },
+  bannerCard: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+  },
+  graphicsBanner: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    minHeight: "100vh",
+    justifyContent: "space-around",
+  },
+  shopCard: {
+    width: "100%",
+    alignItems: "center",
+    height: "73%",
+    justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
+  },
+  shopCardCard: {
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    height: "50%",
+    width: "90%",
+  },
 }));
 
 export default BoxesStyles;

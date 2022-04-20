@@ -22,7 +22,7 @@ const ElementsStyles = makeStyles(() => ({
   cardActive: {
     backgroundColor: "#93B6C2",
     color: "white",
-        transform: "scale(1.02)",
+    transform: "scale(1.02)",
     cursor: "pointer",
   },
   card: {
@@ -35,6 +35,11 @@ const ElementsStyles = makeStyles(() => ({
   },
   hidden: {
     display: "none",
+  },
+  buttonStyle: {
+    width: "12vw",
+    height: "45px",
+
   },
 }));
 

@@ -15,14 +15,15 @@ import { resetServices } from "../store/servSlice";
 import { resetBarber } from "../store/barberSlice";
 import { Avatar } from "@mui/material";
 import BoxesStyles from "../styles/styleBoxes";
+import { theme } from "../App";
 
 import { useState } from "react";
 import CustomerAvatar from "../elements/avatar";
 import { resetDate } from "../store/dateSlice";
-import { resetShop } from "../store/shopSlice";
 
 import BookButton from "../elements/bookButton";
 import ShopDropdown from "../elements/shopDropdown";
+import { ThemeProvider } from "@mui/system";
 
 const pages = {
   home: "Home",
@@ -60,14 +61,15 @@ const Navbar = () => {
 
   return (
     <>
+
       <Box
-        className="navbar"
         sx={{
           position: "fixed",
           top: 0,
           left: 0,
           width: "100%",
           zIndex: "100",
+          backgroundColor: "primary.main",
         }}
       >
         {/* <AppBar color="transparent" sx={{ border: 0 }}> */}
@@ -79,7 +81,7 @@ const Navbar = () => {
           }}
         >
           <Box sx={{ maxWidth: 50, maxHeight: 50 }}>
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <img src={logo} alt="LEDO logo" className="logo" />
             </Link>
           </Box>
@@ -142,8 +144,7 @@ const Navbar = () => {
               ml: 5,
             }}
           >
-            {/* <ShopDropdown situation="mainPage" fs="0.7rem" /> */}
-            <BookButton color="secondary" />
+            <BookButton color="accent" />
 
             <Box
               sx={{
@@ -200,6 +201,7 @@ const Navbar = () => {
         </Toolbar>
         {/* </AppBar> */}
       </Box>
+
     </>
   );
 };

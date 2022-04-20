@@ -32,7 +32,7 @@ const SwitchCard = ({
           fontSize: "3rem",
           fontWeight: "900",
         }}
-        variant="cairo"
+        variant="secondary"
       >
         {header}
       </Typography>

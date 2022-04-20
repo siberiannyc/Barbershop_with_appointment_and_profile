@@ -12,7 +12,7 @@ import Selectors from "../store/selectors";
 import { loader } from "../store/loginSlice";
 
 const ShopDropdown = ({
-  setShopName,
+  shopColor,
   setButton,
   shopName,
   situation,
@@ -111,7 +111,7 @@ const ShopDropdown = ({
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
             onClick={(e) => openMenu(e)}
-            sx={{ fontSize: fs }}
+            sx={{ fontSize: fs, color: shopColor }}
           >
             {selector.shop.activeShop.name !== ""
               ? ` ${selector.shop.activeShop.name}, ${selector.shop.activeShop.city}`
@@ -125,7 +125,7 @@ const ShopDropdown = ({
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
             onClick={(e) => openMenu(e)}
-            sx={{ fontSize: fs }}
+            sx={{ fontSize: fs, color: shopColor }}
           >
             {selector.customer.activeShop.name !== ""
               ? ` ${selector.customer.activeShop.name}, ${selector.customer.activeShop.city}`

@@ -21,7 +21,7 @@ export default function NoInfoBox({ image, text }) {
       />
       <Typography
         variant="h6"
-        sx={{ fontFamily: "Cairo", textAlign: "center" }}
+        sx={{ fontFamily: "Cairo", textAlign: "center", color: "info.main" }}
       >
         {text}
       </Typography>

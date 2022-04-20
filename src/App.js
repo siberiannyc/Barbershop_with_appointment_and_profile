@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar";
 import MainPage from "./components/mainPage";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import Footer from "./components/footer";
 import { Routes, Route } from "react-router-dom";
 import BookShop from "./components/chooseShopPage";
@@ -19,37 +19,7 @@ import Services from "./components/services";
 import ServicesDisplay from "./components/servicesDisplay";
 import PriceList from "./components/priceList";
 import Careers from "./components/careers";
-
-const theme = createTheme({
-  typography: {
-    fontFamily: "Lato",
-
-    cairo: {
-      fontFamily: "Cairo",
-    },
-  },
-  palette: {
-    type: "light",
-    primary: {
-      main: "#08282F",
-    },
-    secondary: {
-      main: "#93B6C2",
-    },
-    info: {
-      main: "#637A82",
-    },
-    success: {
-      main: "#21b533",
-    },
-    error: {
-      main: "#CC1212",
-    },
-    warning: {
-      main: "#293236",
-    },
-  },
-});
+import { theme } from "./styles/mainTheme";
 
 function App() {
   return (
