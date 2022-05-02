@@ -150,22 +150,22 @@ const ServicesList = [
     description:
       "Let us get those hard-to-reach hairs. Hear what we're saying?",
   },
-  {
-    id: 18,
-    group: "DETAILING",
-    name: "WAX DUO",
-    time: 15,
-    price: "$26",
-    description: "Combine any two waxing services - ear, nose and/or eyebrows.",
-  },
-  {
-    id: 19,
-    group: "DETAILING",
-    name: "WAX TRIO",
-    time: 15,
-    price: "$32",
-    description: "Combine all three waxing services - ear, nose and eyebrows.",
-  },
+  // {
+  //   id: 18,
+  //   group: "DETAILING",
+  //   name: "WAX DUO",
+  //   time: 15,
+  //   price: "$26",
+  //   description: "Combine any two waxing services - ear, nose and/or eyebrows.",
+  // },
+  // {
+  //   id: 19,
+  //   group: "DETAILING",
+  //   name: "WAX TRIO",
+  //   time: 15,
+  //   price: "$32",
+  //   description: "Combine all three waxing services - ear, nose and eyebrows.",
+  // },
 ];
 
 export const servicesGroup = [

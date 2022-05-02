@@ -6,17 +6,16 @@ import BoxesStyles from "../styles/styleBoxes";
 import { Outlet, NavLink } from "react-router-dom";
 import ElementsStyles from "../styles/styleElements";
 import { servicesGroup } from "../data/servicesList";
-import ChosenServices from "./chosenServices";
+import ChosenServices from "../components/chosenServices";
 import { useEffect } from "react";
 
 import Selectors from "../store/selectors";
 
-const ServicesDisplay = () => {
+const BookServices = () => {
   const elements = ElementsStyles();
   const dispatch = useDispatch();
   const boxes = BoxesStyles();
   const selector = Selectors();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -32,6 +31,7 @@ const ServicesDisplay = () => {
         width: "98%",
         mt: "10vh",
         p: 1,
+        bgcolor: "info.main",
       }}
     >
       <Box
@@ -46,22 +46,17 @@ const ServicesDisplay = () => {
         }}
       >
         <Box
-          sx={{
-            height: "15%",
-            width: "100%",
-            justifyContent: "space-evenly",
-          }}
+          sx={{ height: "15%", width: "100%", justifyContent: "space-evenly" }}
           className={boxes.row}
         >
           {servicesGroup.map((service) => {
             return (
               <NavLink to="services" className="link" key={service.id}>
-                <Card
-                  raised
+                <Box
+                  // raised
                   sx={{
                     width: 300,
-                    height: 70,
-                    borderRadius: 10,
+                    height: 150,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
@@ -76,7 +71,7 @@ const ServicesDisplay = () => {
                 >
                   <Typography variant="h6">{service.name}</Typography>
                   <Typography variant="body1">{service.description}</Typography>
-                </Card>
+                </Box>
               </NavLink>
             );
           })}
@@ -89,15 +84,28 @@ const ServicesDisplay = () => {
             flexWrap: "wrap",
             overflow: "scroll",
             mt: 3,
-            pb: 2,
           }}
           className={boxes.row}
         >
           <Outlet />
         </Box>
       </Box>
+      <Box
+        raised
+        sx={{
+          width: "35%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <ChosenServices />
+      </Box>
     </Box>
   );
 };
 
-export default ServicesDisplay;
+export default BookServices;

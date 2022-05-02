@@ -2,23 +2,23 @@ import { Card, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
 
-import BarberCard from "../../elements/barberCard";
+import BarberCard from "../barberCard";
 import BoxesStyles from "../../styles/styleBoxes";
-import AppointmentCard from "../../elements/appointmentCard";
-import StatsCard from "../../elements/statsCard";
+import AppointmentCard from "../appointmentCard";
+import StatsCard from "../../elements/profile/statsCard";
 import Selectors from "../../store/selectors";
 import useVisited from "../../hooks/useVisited";
 import { useDispatch } from "react-redux";
 import { loader } from "../../store/loginSlice";
-import Loader from "../../elements/loader";
+import Loader from "../../elements/misc/loader";
 import useTimeSorted from "../../hooks/useTimeSorted";
-import ApntCardSection from "../../elements/apntCardSection";
+import ApntCardSection from "../../elements/appointment card/apntCardSection";
 import { StatsData } from "../../data/dataObjects";
-import AppointmentServices from "../../elements/appointmentServices";
-import BasicRating from "../../elements/rating";
+import AppointmentServices from "../../elements/appointment card/appointmentServices";
+import BasicRating from "../../elements/appointment card/rating";
 import { Rating } from "@mui/material";
 import { Link } from "react-router-dom";
-import BookButton from "../../elements/bookButton";
+import BookButton from "../../elements/buttons/bookButton";
 
 export default function Stats() {
   const boxes = BoxesStyles();

@@ -7,8 +7,8 @@ import { services, serviceTime } from "../store/servSlice";
 import Selectors from "../store/selectors";
 
 import ServicesList from "../data/servicesList";
-import ServiceCard from "../elements/serviceCard";
-import ServiceDispCard from "../elements/serviceCard";
+import ServiceCard from "./serviceCard";
+import ServiceDispCard from "./serviceCard";
 import { Box, Container } from "@mui/material";
 import BoxesStyles from "../styles/styleBoxes";
 
@@ -96,16 +96,20 @@ const Services = () => {
   }, [serviceId]);
 
   return (
-    <Container
+    <Box
       className={boxes.row}
-      sx={{ justifyContent: "center", alignItems: "center" }}
+      sx={{
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100%",
+      }}
     >
       <Box
         className={boxes.rowRaw}
         sx={{
           flexWrap: "wrap",
-          width: "90%",
-          height: "60vh",
+          width: "100%",
+          height: "100%",
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -124,7 +128,7 @@ const Services = () => {
           );
         })}
       </Box>
-    </Container>
+    </Box>
   );
 };
 

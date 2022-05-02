@@ -13,8 +13,12 @@ export const theme = createTheme({
       main: "#D65032",
       contrastText: "#fff",
     },
+    accentSecondary: {
+      main: "#403A99",
+      contrastText: "#fff",
+    },
     info: {
-      main: "#d9edfc",
+      main: "#fffcfa",
     },
     success: {
       main: "#4FA142",

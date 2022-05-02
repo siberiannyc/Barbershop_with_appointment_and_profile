@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useEmail, useUpdate } from "../../firebase/auth";
 import { Card, Box } from "@mui/material";
 import BoxesStyles from "../../styles/styleBoxes";
-import PersonalForm from "../../elements/personalForm";
+import PersonalForm from "../../elements/authorization/personalForm";
 import { Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
 import { PersonalData } from "../../data/dataObjects";
@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 import { success } from "../../store/customerSlice";
 import { errors, snackbar } from "../../store/loginSlice";
 import { useChangePersonal } from "../../hooks/useChangePersonal";
-import SnackbarAlert from "../../elements/snackbar";
+import SnackbarAlert from "../../elements/misc/snackbar";
 
 export default function Personal() {
   const boxes = BoxesStyles();

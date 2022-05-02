@@ -1,11 +1,11 @@
-import PersonalForm from "../../elements/personalForm";
+import PersonalForm from "../../elements/authorization/personalForm";
 import { Box, Card } from "@mui/material";
 import BoxesStyles from "../../styles/styleBoxes";
 import { PassChange } from "../../data/dataObjects";
 import { useState } from "react";
-import PassForm from "../../elements/passForm";
+import PassForm from "../../elements/authorization/passForm";
 import { useChangePassword } from "../../hooks/useChangePassword";
-import SnackbarAlert from "../../elements/snackbar";
+import SnackbarAlert from "../../elements/misc/snackbar";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { errors, snackbar } from "../../store/loginSlice";

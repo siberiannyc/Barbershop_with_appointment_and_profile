@@ -18,11 +18,10 @@ import BoxesStyles from "../styles/styleBoxes";
 import { theme } from "../App";
 
 import { useState } from "react";
-import CustomerAvatar from "../elements/avatar";
+import CustomerAvatar from "../elements/misc/avatar";
 import { resetDate } from "../store/dateSlice";
 
-import BookButton from "../elements/bookButton";
-import ShopDropdown from "../elements/shopDropdown";
+import BookButton from "../elements/buttons/bookButton";
 import { ThemeProvider } from "@mui/system";
 
 const pages = {

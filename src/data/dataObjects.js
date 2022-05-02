@@ -9,8 +9,8 @@ import HourglassTopTwoToneIcon from "@mui/icons-material/HourglassTopTwoTone";
 import BallotTwoToneIcon from "@mui/icons-material/BallotTwoTone";
 import AppointmentServices, {
   AppointmentServicesExt,
-} from "../elements/appointmentServices";
-import { Services } from "../elements/appointmentServices";
+} from "../elements/appointment card/appointmentServices";
+import { Services } from "../elements/appointment card/appointmentServices";
 
 export default function AppointmentCardStructure(data) {
   let infoObject = {

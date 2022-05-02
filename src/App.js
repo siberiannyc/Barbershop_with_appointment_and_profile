@@ -1,15 +1,15 @@
 import Navbar from "./components/navbar";
-import MainPage from "./components/mainPage";
+import MainPage from "./pages/mainPage";
 import { ThemeProvider } from "@mui/material";
 import Footer from "./components/footer";
 import { Routes, Route } from "react-router-dom";
-import BookShop from "./components/chooseShopPage";
-import BookServices from "./components/servicesPage";
-import Barbers from "./components/barbersPage";
-import FinalAppointment from "./components/finalizeAppointmentPage";
+import BookShop from "./pages/chooseShopPage";
+import BookServices from "./pages/servicesPage";
+// import Barbers from "./components/barbersPage";
+import FinalAppointment from "./pages/finalizeAppointmentPage";
 import BarberSchedule from "./barber_app";
-import Profile from "./components/profile";
-import SignInSignUp from "./components/authorization";
+import Profile from "./pages/profile";
+import SignInSignUp from "./pages/authorization";
 import PrivateRoute from "./misc/PrivateRoute";
 import Stats from "./components/profile/stats";
 import Personal from "./components/profile/personal";
@@ -17,9 +17,11 @@ import Security from "./components/profile/security";
 import Appointments from "./components/profile/appointments";
 import Services from "./components/services";
 import ServicesDisplay from "./components/servicesDisplay";
-import PriceList from "./components/priceList";
-import Careers from "./components/careers";
+import PriceList from "./pages/priceList";
+import Careers from "./pages/careers";
 import { theme } from "./styles/mainTheme";
+import BarbersNew from "./pages/pickAppointment";
+
 
 function App() {
   return (
@@ -38,7 +40,8 @@ function App() {
           <Route path="book-services/*" element={<BookServices />}>
             <Route path="services" element={<Services />} />
           </Route>
-          <Route path="book-barbers" element={<Barbers />} />
+          <Route path="book-barbers" element={<BarbersNew />}>
+          </Route>
           <Route path="finish-booking" element={<FinalAppointment />} />
           <Route path="barber-schedule" element={<BarberSchedule />} />
           <Route path="authenticate" element={<SignInSignUp />} />

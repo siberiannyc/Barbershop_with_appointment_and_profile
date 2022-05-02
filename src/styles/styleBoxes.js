@@ -15,7 +15,7 @@ const BoxesStyles = makeStyles(() => ({
     flexDirection: "column",
     justifyContent: "space-evenly",
     alignItems: "center",
-    height: "88vh",
+    height: "100vh",
   },
   base: {
     width: "100vw",

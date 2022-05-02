@@ -7,7 +7,7 @@ import { useBarbUpdate, useBarbUpload } from "../firebase/barberConfigs";
 import SwitchShift from "../data/shiftSelector";
 import ShiftsList from "../data/shiftsList";
 import BarbersList from "../data/barbersList";
-import BarberCard from "../elements/barberCard";
+import BarberCard from "../components/barberCard";
 import Selectors from "../store/selectors";
 // MUI Imports
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
@@ -26,7 +26,7 @@ import {
   IconButton,
   CircularProgress,
 } from "@mui/material";
-import CareersForm from "../elements/careersForm";
+import CareersForm from "../elements/careers/careersForm";
 
 // --------------------
 

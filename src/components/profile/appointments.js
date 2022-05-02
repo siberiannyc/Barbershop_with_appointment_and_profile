@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { isUpdated } from "../../store/customerSlice";
 
-import AppointmentCard from "../../elements/appointmentCard";
+import AppointmentCard from "../appointmentCard";
 import { useBarbUpdate, useBarbUpload } from "../../firebase/barberConfigs";
 import { Box } from "@mui/system";
 import TabsUnstyled from "@mui/base/TabsUnstyled";
@@ -18,13 +18,13 @@ import {
 } from "../../store/barberSlice";
 
 import { useUpdate } from "../../firebase/auth";
-import Loader from "../../elements/loader";
+import Loader from "../../elements/misc/loader";
 import useVisited from "../../hooks/useVisited";
 import { loader } from "../../store/loginSlice";
 import useTimeSorted from "../../hooks/useTimeSorted";
 import noAppointments from "../../media/svg/noAppointments.svg";
-import NoInfoBox from "../../elements/noInfoBox";
-import BookButton from "../../elements/bookButton";
+import NoInfoBox from "../noInfoBox";
+import BookButton from "../../elements/buttons/bookButton";
 
 export default function Appointments() {
   const boxes = BoxesStyles();
